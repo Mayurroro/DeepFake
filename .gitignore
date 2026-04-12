@@ -1,0 +1,20 @@
+#Ignore audio files
+*.wav
+
+#Ignore image files
+*.jpg
+
+# Ignore datasets and heavy model weights
+Datasets/
+*.pth
+*.pt
+
+# Python caches and environments
+__pycache__/
+*.pyc
+.venv/
+env/
+.env
+
+# LFS rules
+.gitattributes

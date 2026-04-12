@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "mode": "yolo",
+  "granularity": "coarse",
+  "parallelization": false,
+  "commit_docs": true,
+  "model_profile": "balanced",
+  "sub_repos": [],
+  "workflow": {
+    "research": false,
+    "discuss": false,
+    "plan_check": false,
+    "verifier": true,
+    "nyquist_validation": false,
+    "auto_advance": true,
+    "text_mode": false,
+    "discuss_mode": "discuss",
+    "research_before_questions": false,
+    "max_discuss_passes": 1,
+    "_auto_chain_active": true
+  }
+}
