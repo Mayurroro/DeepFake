@@ -12,7 +12,9 @@ def process_file(file_path, api_url):
         with open(file_path, "rb") as f:
             resp = requests.post(api_url, files={"file": (os.path.basename(file_path), f)})
             if resp.status_code == 200:
-                return {**resp.json(), "status": "success"}
+                report = resp.json()
+                report["status"] = "success"
+                return report
             return {"filename": os.path.basename(file_path), "status": "failed", "error": resp.text}
     except Exception as e:
         return {"filename": os.path.basename(file_path), "status": "failed", "error": str(e)}

@@ -30,9 +30,9 @@ from torch.utils.data import Dataset, DataLoader
 
 # Global imports for models and utils (moved out of function to detect import errors early)
 try:
-    from models.image_detector import ImageDetector
+    from models.image_detector import ImageDetectorEnsemble
     from models.audio_detector import AudioDetector
-    from utils.feature_extractors import preprocess_image, extract_audio_features
+    from utils.feature_extractors import preprocess_image_ensemble, extract_audio_features
 except ImportError as e:
     print(f"[FATAL ERROR] Import failed: {e}")
     traceback.print_exc()
@@ -78,6 +78,10 @@ class ListDataset(Dataset):
                     self.samples.append((parts[0], int(parts[1])))
         print(f"  Loaded {len(self.samples)} samples from {list_file}", flush=True)
 
+    def num_classes(self):
+        """Auto-detect class count from the biggest label in the list."""
+        return max((lbl for _, lbl in self.samples), default=0) + 1
+
     def __len__(self):
         return len(self.samples)
 
@@ -85,15 +89,15 @@ class ListDataset(Dataset):
         path, label = self.samples[idx]
         try:
             if self.mode == "image":
-                rgb, freq, edge = preprocess_image(path)
-                return rgb, freq, edge, label
+                rgb, noise, freq = preprocess_image_ensemble(path)
+                return rgb, noise, freq, label
             else:
                 mel, aux = extract_audio_features(path)
                 return mel, aux, label
         except Exception as e:
             # Return zero tensors on error so training doesn't crash
             if self.mode == "image":
-                return torch.zeros(3, 512, 512), torch.zeros(1, 512, 512), torch.zeros(1, 512, 512), label
+                return torch.zeros(3, 512, 512), torch.zeros(3, 512, 512), torch.zeros(1, 512, 512), label
             else:
                 return torch.zeros(1, 128, 400), torch.zeros(30), label
 
@@ -119,7 +123,7 @@ def prepare_datasets():
 # ===================================================================
 # Step 2: Train
 # ===================================================================
-def train_model(list_file, mode="image", epochs=30, batch_size=32, lr=1e-4):
+def train_model(list_file, mode="image", epochs=30, batch_size=32, lr=1e-4, freeze_backbone=False):
     # Device detection
     if torch.cuda.is_available():
         device = torch.device("cuda")
@@ -143,12 +147,18 @@ def train_model(list_file, mode="image", epochs=30, batch_size=32, lr=1e-4):
     print("  Initializing model...", flush=True)
     try:
         if mode == "image":
-            model = ImageDetector(pretrained=True).to(device)
+            model = ImageDetectorEnsemble(pretrained=True, num_classes=ds.num_classes()).to(device)
+            if freeze_backbone:
+                for name, p in model.named_parameters():
+                    if name.startswith("branches."):
+                        p.requires_grad = False
+                trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
+                print(f"  [FREEZE] Backbones frozen; training {trainable:,} head params", flush=True)
             save_name = "image_detector.pth"
         else:
             model = AudioDetector().to(device)
             save_name = "audio_detector.pth"
-        print("  Model ready.", flush=True)
+        print(f"  Model ready. num_classes={ds.num_classes() if mode == 'image' else 3}", flush=True)
     except Exception as e:
         print(f"  [FATAL] Model initialization failed: {e}", flush=True)
         traceback.print_exc()
@@ -181,7 +191,7 @@ def train_model(list_file, mode="image", epochs=30, batch_size=32, lr=1e-4):
                     print(f"    Processing batch {i+1}/{len(loader)}...", flush=True)
 
                 if mode == "image":
-                    rgb, freq, edge, lbl = [b.to(device) for b in batch]
+                    rgb, noise, freq, lbl = [b.to(device) for b in batch]
                 else:
                     mel, aux, lbl = batch[0].to(device), batch[1].to(device), batch[2].to(device)
 
@@ -189,14 +199,14 @@ def train_model(list_file, mode="image", epochs=30, batch_size=32, lr=1e-4):
 
                 if scaler:
                     with torch.amp.autocast("cuda"):
-                        logits = model(rgb, freq, edge)[0] if mode == "image" else model(mel, aux)[0]
+                        logits = model(rgb, noise, freq)[0] if mode == "image" else model(mel, aux)[0]
                         loss = criterion(logits, lbl)
                     scaler.scale(loss).backward()
                     scaler.step(optimizer)
                     scaler.update()
                 else:
                     # Generic autocast for MPS/CPU if available, or just plain
-                    logits = model(rgb, freq, edge)[0] if mode == "image" else model(mel, aux)[0]
+                    logits = model(rgb, noise, freq)[0] if mode == "image" else model(mel, aux)[0]
                     loss = criterion(logits, lbl)
                     loss.backward()
                     optimizer.step()
@@ -250,15 +260,18 @@ def evaluate_model(test_list, mode="image"):
 
     try:
         if mode == "image":
-            model = ImageDetector(pretrained=False).to(device)
+            model = ImageDetectorEnsemble(pretrained=False, num_classes=ds.num_classes()).to(device)
             w = WEIGHTS / "image_detector.pth"
         else:
             model = AudioDetector().to(device)
             w = WEIGHTS / "audio_detector.pth"
 
         if w.exists():
-            model.load_state_dict(torch.load(w, map_location=device))
-            print(f"  Loaded weights: {w}", flush=True)
+            try:
+                model.load_state_dict(torch.load(w, map_location=device))
+                print(f"  Loaded weights: {w}", flush=True)
+            except Exception as e:
+                print(f"  [WARN] Could not load {w}: {e}. Using fresh weights.", flush=True)
         else:
             print(f"  [WARN] No weights found at {w}. Evaluating random init.", flush=True)
 
@@ -269,8 +282,8 @@ def evaluate_model(test_list, mode="image"):
         with torch.no_grad():
             for batch in loader:
                 if mode == "image":
-                    rgb, freq, edge, lbl = [b.to(device) for b in batch]
-                    logits = model(rgb, freq, edge)[0]
+                    rgb, noise, freq, lbl = [b.to(device) for b in batch]
+                    logits = model(rgb, noise, freq)[0]
                 else:
                     mel, aux, lbl = batch[0].to(device), batch[1].to(device), batch[2].to(device)
                     logits = model(mel, aux)[0]
@@ -284,7 +297,7 @@ def evaluate_model(test_list, mode="image"):
         acc = correct / total if total > 0 else 0
         print(f"\n  Test Accuracy: {acc:.2%} ({correct}/{total})", flush=True)
 
-        classes = ["REAL", "MANIPULATED", "AI_GENERATED"]
+        classes = ["REAL", "FAKE"] if ds.num_classes() == 2 else ["REAL", "MANIPULATED", "AI_GENERATED"]
         for cls_idx, cls_name in enumerate(classes):
             cls_total = sum(1 for l in all_labels if l == cls_idx)
             cls_correct = sum(1 for p, l in zip(all_preds, all_labels) if l == cls_idx and p == cls_idx)
@@ -303,6 +316,7 @@ if __name__ == "__main__":
     p.add_argument("--epochs", type=int, default=30, help="Training epochs (default: 30)")
     p.add_argument("--batch", type=int, default=32, help="Batch size (default: 32)")
     p.add_argument("--lr", type=float, default=1e-4, help="Learning rate (default: 1e-4)")
+    p.add_argument("--freeze-backbone", action="store_true", help="Freeze pretrained branches; train fusion head only")
     p.add_argument("--skip-prepare", action="store_true", help="Skip dataset preparation")
     p.add_argument("--eval-only", action="store_true", help="Only evaluate, don't train")
     a = p.parse_args()
@@ -319,7 +333,7 @@ if __name__ == "__main__":
 
             if not a.eval_only:
                 if train_list.exists():
-                    train_model(str(train_list), m, a.epochs, a.batch, a.lr)
+                    train_model(str(train_list), m, a.epochs, a.batch, a.lr, a.freeze_backbone)
                 else:
                     print(f"  [WARN] {train_list} not found -- skipping {m} training.", flush=True)
 

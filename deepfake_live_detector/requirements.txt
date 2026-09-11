@@ -31,7 +31,14 @@ streamlit-webrtc>=0.47.0
 scikit-learn>=1.3.0
 matplotlib>=3.7.2
 tqdm>=4.66.1
+datasets>=2.19.0
 
 # ONNX Export
 onnx>=1.14.0
 onnxruntime>=1.15.0
+
+# Forensics
+python-magic>=0.4.27
+python-magic-bin>=0.4.14
+c2pa-python>=0.37.10
+PyExifTool>=0.5.6

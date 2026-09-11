@@ -7,46 +7,45 @@ sys.path.insert(0, str(ROOT))
 
 try:
     print("Testing ImageDetector loading...")
-    from models.image_detector import ImageDetector
-    model = ImageDetector(pretrained=True).to("cpu")
-    print("Model loaded.")
+    from models.image_detector import ImageDetectorEnsemble
+    from training.train import ListDataset, FocalLoss
+    import torch.optim as optim
 
-    print("Testing dataset sample...")
-    from training.train import ListDataset
     train_list = ROOT / "training/image_train_list.txt"
     ds = ListDataset(str(train_list), mode="image")
-    
+
     if len(ds) == 0:
         print("Dataset is empty!")
         sys.exit(1)
-        
+
+    model = ImageDetectorEnsemble(pretrained=True, num_classes=ds.num_classes()).to("cpu")
+    print(f"Model loaded. num_classes={ds.num_classes()}")
+
     sample = ds[0]
-    rgb, freq, edge, label = sample
-    print(f"Sample shapes: rgb={rgb.shape}, freq={freq.shape}, edge={edge.shape}, label={label}")
+    rgb, noise, freq, label = sample
+    print(f"Sample shapes: rgb={rgb.shape}, noise={noise.shape}, freq={freq.shape}, label={label}")
 
     print("Testing forward pass with batch size 4...")
     rgb_batch = rgb.unsqueeze(0).repeat(4, 1, 1, 1)
+    noise_batch = noise.unsqueeze(0).repeat(4, 1, 1, 1)
     freq_batch = freq.unsqueeze(0).repeat(4, 1, 1, 1)
-    edge_batch = edge.unsqueeze(0).repeat(4, 1, 1, 1)
-    
-    logits, _ = model(rgb_batch, freq_batch, edge_batch)
+
+    logits, _ = model(rgb_batch, noise_batch, freq_batch)
     print(f"Logits shape: {logits.shape}")
 
     print("Testing loss and backward...")
-    from training.train import FocalLoss
-    import torch.optim as optim
     criterion = FocalLoss()
     optimizer = optim.AdamW(model.parameters(), lr=1e-4)
-    
+
     loss = criterion(logits, torch.tensor([label]))
     print(f"Loss: {loss.item()}")
-    
+
     loss.backward()
     print("Backward pass successful.")
-    
+
     optimizer.step()
     print("Optimization step successful.")
-    
+
     print("Success!")
 
 except Exception as e:

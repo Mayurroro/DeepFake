@@ -13,8 +13,8 @@ IMG_TRANSFORM = T.Compose([
     T.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
 
-def preprocess_image(source, size=(512, 512)):
-    """Accept file-path *or* BGR numpy array. Returns (rgb_tensor, freq_tensor, edge_tensor)."""
+def _load_rgb(source, size):
+    """Accept file-path *or* RGB ndarray. Returns resized RGB uint8 ndarray."""
     if isinstance(source, str):
         img = cv2.imread(source)
         if img is None:
@@ -24,8 +24,12 @@ def preprocess_image(source, size=(512, 512)):
         img = source if source.shape[2] == 3 else cv2.cvtColor(source, cv2.COLOR_BGR2RGB)
     else:
         raise TypeError("source must be a filepath or numpy array")
+    return cv2.resize(img, size)
 
-    img = cv2.resize(img, size)
+
+def preprocess_image(source, size=(512, 512)):
+    """Accept file-path *or* BGR numpy array. Returns (rgb_tensor, freq_tensor, edge_tensor)."""
+    img = _load_rgb(source, size)
     gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
     # FFT magnitude spectrum
@@ -40,6 +44,32 @@ def preprocess_image(source, size=(512, 512)):
     freq_t = torch.tensor(mag, dtype=torch.float32).unsqueeze(0)
     edge_t = torch.tensor(edges, dtype=torch.float32).unsqueeze(0)
     return rgb_t, freq_t, edge_t
+
+
+def preprocess_image_ensemble(source, size=(256, 256)):
+    """RGB, noise-residual, and FFT tensors for the 3-branch ImageDetectorEnsemble.
+
+    Returns (rgb_t, noise_t, freq_t). Noise is the high-pass residual (gray minus
+    Gaussian blur) replicated to 3 channels for the Conv2d(3, ...) noise branch.
+    """
+    img = _load_rgb(source, size)
+    gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+
+    # FFT magnitude spectrum (same as preprocess_image)
+    f = np.fft.fftshift(np.fft.fft2(gray))
+    mag = 20 * np.log(np.abs(f) + 1e-8)
+    mag = (mag - mag.min()) / (mag.max() - mag.min() + 1e-8)
+
+    # High-pass noise residual
+    gray_f = gray.astype(np.float32) / 255.0
+    resid = gray_f - cv2.GaussianBlur(gray_f, (5, 5), 0)
+    resid = (resid - resid.mean()) / (resid.std() + 1e-8)
+    resid = np.stack([resid] * 3, axis=-1)  # replicate to 3 channels
+
+    rgb_t = IMG_TRANSFORM(img)
+    noise_t = torch.tensor(resid.transpose(2, 0, 1), dtype=torch.float32)
+    freq_t = torch.tensor(mag, dtype=torch.float32).unsqueeze(0)
+    return rgb_t, noise_t, freq_t
 
 
 def extract_metadata(path):

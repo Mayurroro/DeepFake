@@ -11,14 +11,14 @@ OUT.mkdir(exist_ok=True)
 
 
 def export_image():
-    from models.image_detector import ImageDetector
-    m = ImageDetector(pretrained=False).eval()
+    from models.image_detector import ImageDetectorEnsemble
+    m = ImageDetectorEnsemble(pretrained=False, num_classes=2).eval()
     w = WEIGHTS / "image_detector.pth"
     if w.exists():
         m.load_state_dict(torch.load(w, map_location="cpu"))
-    dummy = (torch.randn(1, 3, 512, 512), torch.randn(1, 1, 512, 512), torch.randn(1, 1, 512, 512))
+    dummy = (torch.randn(1, 3, 512, 512), torch.randn(1, 3, 512, 512), torch.randn(1, 1, 512, 512))
     out = OUT / "image_detector.onnx"
-    torch.onnx.export(m, dummy, str(out), input_names=["rgb", "freq", "edges"],
+    torch.onnx.export(m, dummy, str(out), input_names=["rgb", "noise", "freq"],
                       output_names=["logits", "features"], opset_version=14)
     print(f"✓ Image detector → {out}")
 

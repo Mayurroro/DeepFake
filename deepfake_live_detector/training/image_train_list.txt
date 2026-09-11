@@ -1,484 +1,474 @@
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\129.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\130.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\131.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\132.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\133.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\134.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\135.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\136.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\137.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\138.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\139.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\140.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\141.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\142.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\143.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\144.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\145.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\146.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\147.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\148.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\149.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\150.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\151.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\152.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\153.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\154.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\155.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\156.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\157(1).jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\157.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\158(1).jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\158.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\159(1).jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\159.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\160.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\161.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\162.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\163.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\164.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\165.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\166.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\167.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\168.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\169.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\170.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\171.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\172.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\173.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\174.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\175.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\176.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\177.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\178.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\179.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\180.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\181.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\182.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\183.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\184.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\185.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\186.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\187.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\188.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\189.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\190.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\191.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\192.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\193.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\194.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\195.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\196.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\197.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\198.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\199.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\200.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\201.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\202.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\203.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\204.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\205.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\206.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\207.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\208.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\209.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\210.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\211.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\212.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\213.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\214.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\215.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\216.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\217.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\218.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\219.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\220.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\221.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\222.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\223.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\224.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\225.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\226.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\227.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\228.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\229.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\230.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\231.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\232.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\233.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\234.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\235.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\236.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\237.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\238.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\239.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\240.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\241.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\242.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\243.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\244.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\245.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\246.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\247.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\248.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\249.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\250.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\511.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\512.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\513.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\514.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\515.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\516.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\517.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\518.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\519.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\520.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\521.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\522.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\523.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\524.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\525.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\526.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\527.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\528.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\529.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\530.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\531.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\532.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\533.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\534.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\535.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\536.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\537.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\fake\538.jpg 2
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5110.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5111.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5112.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5113.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5114.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5115.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5116.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5117.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5118.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5119.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5120.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5121.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5122.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5123.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5124.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5125.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5126.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5127.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5128.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5129.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5130.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5131.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5132.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5133.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5134.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5135.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5136.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5137.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5138.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5139.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5140.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5141.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5142.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5143.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5144.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5145.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5146.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5147.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5148.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5149.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5150.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5151.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5152.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5153.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5154.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5155.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5156.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5157.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5158.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5159.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5160.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5161.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5162.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5163.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5164.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5165.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5166.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5167.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5168.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5169.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5170.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5171.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5172.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5173.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5174.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5175.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5176.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5177.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5178.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5179.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5180.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5181.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5182.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5183.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5184.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5185.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5186.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5187.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5188.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5189.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5190.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5191.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5192.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5193.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5194.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5195.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5196.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5197.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5198.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5199.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5200.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5201.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5202.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5203.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5204.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5205.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5206.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5207.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5208.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5209.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5210.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5211.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5212.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5213.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5214.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5215.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5216.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5217.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5218.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5219.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5220.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5221.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5222.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5223.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5224.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5225.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5226.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5227.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5228.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5229.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5230.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5231.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5232.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5233.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5234.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5235.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5236.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5237.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5238.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5239.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5240.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5241.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5242.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5243.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5244.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5245.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5246.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5247.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5248.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5249.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5250.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5251.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5252.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5253.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5254.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5255.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5256.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5257.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5258.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5259.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5260.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5261.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5262.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5263.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5264.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5265.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5266.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5267.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5268.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5269.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5270.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5271.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5272.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5273.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5274.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5275.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5276.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5277.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5278.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5279.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5280.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5281.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5282.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5283.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5284.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5285.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5286.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5287.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5288.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5289.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5290.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5291.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5292.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5293.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5294.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5295.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5296.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5297.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5298.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5299.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5300.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5301.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5302.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5303.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5304.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5305.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5306.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5307.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5308.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5309.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5310.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5311.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5312.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5313.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5314.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5315.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5316.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5317.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5318.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5319.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5320.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5321.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5322.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5323.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5324.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5325.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5326.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5327.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5328.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5329.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5330.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5331.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5332.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5333.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5334.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5335.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5336.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5337.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5338.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5339.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5340.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5341.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5342.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5343.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5344.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5345.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5346.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5347.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5348.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5349.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5350.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5351.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5352.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5353.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5354.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5355.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5356.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5357.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5358.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5359.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5360.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5361.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5362.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5363.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5364.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5365.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5366.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5367.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5368.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5369.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5370.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5371.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5372.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5373.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5374.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5375.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5376.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5377.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5378.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5379.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5380.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5381.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5382.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5383.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5384.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5385.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5386.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5387.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5388.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5389.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5390.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5391.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5392.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5393.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5394.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5395.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5396.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5397.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5398.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5399.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5400.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5401.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5402.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5403.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5404.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5405.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5406.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5407.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5408.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5409.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5410.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5411.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5412.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5413.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5414.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5415.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5416.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5417.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5418.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5419.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5420.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5421.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5422.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5423.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5424.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5425.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5426.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5427.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5428.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5429.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5430.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5431.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5432.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5433.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5434.jpg 0
-d:\VIT\Datasets\DeepFake images\train-20250112T065955Z-001\train\real\5435.jpg 0
-d:\VIT\Datasets\DeepFake images\Sample_fake_images\Sample_fake_images\fake\IMG-20250106-WA0009.jpg 2
-d:\VIT\Datasets\DeepFake images\Sample_fake_images\Sample_fake_images\fake\IMG-20250106-WA0010.jpg 2
-d:\VIT\Datasets\DeepFake images\Sample_fake_images\Sample_fake_images\fake\IMG-20250106-WA0011.jpg 2
-d:\VIT\Datasets\DeepFake images\Sample_fake_images\Sample_fake_images\fake\IMG-20250106-WA0012.jpg 2
-d:\VIT\Datasets\DeepFake images\Sample_fake_images\Sample_fake_images\fake\IMG-20250106-WA0013.jpg 2
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00000.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00001.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00002.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00003.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00004.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00005.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00006.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00007.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00008.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00009.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00010.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00011.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00012.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00013.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00014.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00015.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00016.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00017.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00018.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00019.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00020.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00021.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00022.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00023.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00024.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00025.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00026.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00027.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00028.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00029.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00030.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00031.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00032.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00033.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00034.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00035.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00036.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00037.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00038.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00039.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00040.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00041.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00042.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00043.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00044.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00045.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00046.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00047.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00048.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00049.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00050.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00051.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00052.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00053.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00054.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00055.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00056.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00057.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00058.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00059.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00060.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00061.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00062.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00063.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00064.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00065.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00066.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00067.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00068.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00069.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00070.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00071.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00072.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00073.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00074.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00075.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00076.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00077.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00078.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00079.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00080.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00081.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00082.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00083.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00084.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00085.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00086.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00087.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00088.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00089.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00090.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00091.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00092.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00093.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00094.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00095.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00096.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00097.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00098.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00099.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00100.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00101.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00102.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00103.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00104.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00105.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00106.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00107.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00108.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00109.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00110.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00111.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00112.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00113.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00114.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00115.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00116.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00117.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00118.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00119.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00120.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00121.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00122.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00123.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00124.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00125.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00126.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00127.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00128.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00129.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00130.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00131.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00132.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00133.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00134.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00135.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00136.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00137.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00138.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00139.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00140.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00141.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00142.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00143.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00144.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00145.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00146.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00147.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00148.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00149.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00150.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00151.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00152.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00153.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00154.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00155.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00156.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00157.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00158.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00159.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00160.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00161.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00162.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00163.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00164.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00165.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00166.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00167.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00168.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00169.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00170.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00171.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00172.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00173.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00174.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00175.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00176.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00177.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00178.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00179.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00180.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00181.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00182.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00183.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00184.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00185.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00186.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00187.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00188.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00189.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00190.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00191.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00192.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00193.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00194.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00195.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00196.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00197.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00198.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00199.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00200.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00201.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00202.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00203.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00204.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00205.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00206.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00207.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00208.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00209.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00210.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00211.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00212.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00213.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00214.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00215.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00216.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00217.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00218.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00219.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00220.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00221.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00222.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00223.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00224.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00225.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00226.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00227.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00228.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00229.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00230.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00231.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00232.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00233.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00234.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00235.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00236.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00237.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00238.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00239.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00240.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00241.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00242.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00243.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00244.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00245.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00246.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00247.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00248.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00249.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00250.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00251.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00252.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00253.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00254.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00255.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00256.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00257.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00258.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00259.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00260.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00261.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00262.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00263.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00264.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00265.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00266.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00267.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00268.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00269.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00270.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00271.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00272.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00273.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00274.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00275.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00276.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00277.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00278.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00279.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00280.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00281.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00282.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00283.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00284.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00285.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00286.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00287.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00288.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00289.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00290.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00291.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00292.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00293.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00294.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00295.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00296.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00297.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00298.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00299.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00300.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00301.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00302.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00303.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00304.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00305.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00306.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00307.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00308.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00309.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00310.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00311.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00312.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00313.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00314.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00315.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00316.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00317.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00318.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00319.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00320.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00321.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00322.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00323.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00324.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00325.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00326.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00327.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00328.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00329.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00330.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00331.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00332.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00333.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00334.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00335.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00336.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00337.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00338.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00339.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00340.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00341.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00342.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00343.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00344.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00345.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00346.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00347.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00348.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00349.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00350.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00351.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00352.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00353.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00354.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00355.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00356.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00357.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00358.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00359.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00360.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00361.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00362.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00363.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00364.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00365.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00366.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00367.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00368.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00369.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00370.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00371.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00372.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00373.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00374.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00375.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00376.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00377.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00378.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00379.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00380.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00381.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00382.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00383.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00384.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00385.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00386.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00387.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00388.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00389.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00390.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00391.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00392.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00393.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00394.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00395.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00396.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00397.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00398.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00399.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00400.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00401.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00402.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00403.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00404.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00405.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00406.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00407.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00408.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00409.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00410.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00411.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00412.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00413.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00414.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00415.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00416.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00417.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00418.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00419.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00420.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00421.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00422.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00423.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00424.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00425.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00426.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00427.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00428.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00429.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00430.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00431.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00432.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00433.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00434.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00435.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00436.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00437.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00438.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00439.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00440.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00441.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00442.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00443.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00444.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00445.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00446.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00447.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00448.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00449.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00450.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00451.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00452.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00453.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00454.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00455.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00456.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00457.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00458.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00459.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00460.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00461.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00462.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00463.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00464.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00465.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00466.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\real\00467.jpg 0
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00468.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00469.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00470.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00471.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00472.jpg 1
+d:\VIT\Datasets\DeepFake-HF-v3\train\fake\00473.jpg 1

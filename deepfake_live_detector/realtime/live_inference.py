@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 WEIGHTS = ROOT / "weights"
 CLASSES = ["REAL", "MANIPULATED", "AI_GENERATED"]
+IMAGE_CLASSES = ["REAL", "FAKE"]
 
 _device = None
 _img_model = None
@@ -30,12 +31,15 @@ def _load_image_model():
     global _img_model
     if _img_model is None:
         import sys; sys.path.insert(0, str(ROOT))
-        from models.image_detector import ImageDetector
-        _img_model = ImageDetector(pretrained=True).to(_get_device()).eval()
+        from models.image_detector import ImageDetectorEnsemble
+        _img_model = ImageDetectorEnsemble(pretrained=True, num_classes=len(IMAGE_CLASSES)).to(_get_device()).eval()
         w = WEIGHTS / "image_detector.pth"
         if w.exists():
-            _img_model.load_state_dict(torch.load(w, map_location=_get_device()))
-            print(f"[LiveInference] Loaded image weights: {w}")
+            try:
+                _img_model.load_state_dict(torch.load(w, map_location=_get_device()))
+                print(f"[LiveInference] Loaded image weights: {w}")
+            except Exception as e:
+                print(f"[LiveInference] Could not load {w} ({e}); using pretrained backbones.")
     return _img_model
 
 
@@ -232,30 +236,32 @@ def _analyze_audio_features(source, sr=16000):
 
 def predict_image(source):
     """Run image detection on a file path or numpy RGB array.
-    Returns dict with prediction, confidence, anomalies, reasons, and timing.
+    Returns dict with prediction, confidence, probabilities, anomalies, reasons, and timing.
     """
-    from utils.feature_extractors import preprocess_image
+    from utils.feature_extractors import preprocess_image_ensemble
     t0 = time.perf_counter()
-    rgb, freq, edge = preprocess_image(source)
+    rgb, noise, freq = preprocess_image_ensemble(source)
     dev = _get_device()
     model = _load_image_model()
 
     with torch.no_grad():
-        logits, _ = model(rgb.unsqueeze(0).to(dev), freq.unsqueeze(0).to(dev), edge.unsqueeze(0).to(dev))
+        logits, _ = model(rgb.unsqueeze(0).to(dev), noise.unsqueeze(0).to(dev), freq.unsqueeze(0).to(dev))
         probs = F.softmax(logits, dim=1).squeeze()
         conf, idx = probs.max(0)
 
-    prediction = CLASSES[idx.item()]
+    prediction = IMAGE_CLASSES[idx.item()]
+    probabilities = {c: round(float(p), 4) for c, p in zip(IMAGE_CLASSES, probs)}
 
     # Run feature-level analysis for reasoning
     anomalies, reasons = _analyze_image_features(source)
 
     # Add model probability insights
+    prob_str = ", ".join(f"{c}: {probabilities[c]:.1%}" for c in IMAGE_CLASSES)
     if prediction != "REAL":
         reasons.insert(0,
             f"🤖 **Model Verdict:** The neural network classified this image as **{prediction}** "
             f"with **{conf.item():.1%}** confidence. "
-            f"Class probabilities — Real: {probs[0].item():.1%}, Manipulated: {probs[1].item():.1%}, AI-Generated: {probs[2].item():.1%}."
+            f"Class probabilities — {prob_str}."
         )
     else:
         reasons = [
@@ -267,6 +273,7 @@ def predict_image(source):
     return {
         "prediction": prediction,
         "confidence": round(conf.item(), 4),
+        "probabilities": probabilities,
         "anomalies": anomalies,
         "reasons": reasons,
         "detection_time_ms": int(dt),
