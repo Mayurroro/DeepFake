@@ -10,10 +10,17 @@ Real-time AI-powered deepfake detection for **images** and **audio** with live w
 deepfake_live_detector/
 ├── models/
 │   ├── image_detector.py      # EfficientNet-B4 + FFT/Edge heads
-│   └── audio_detector.py      # CNN-LSTM on Mel-spectrograms
+│   ├── audio_detector.py      # CNN-LSTM on Mel-spectrograms
+│   └── fusion.py              # Gated mixture-of-experts evidence fusion
 ├── utils/
 │   ├── feature_extractors.py  # Image & audio preprocessing
-│   └── visualization.py       # Grad-CAM heatmaps, confidence bars
+│   ├── pipeline.py            # 10-stage hybrid forensic pipeline
+│   ├── stage1_file_inspection.py
+│   ├── stage2_provenance.py
+│   ├── stage3_metadata.py
+│   ├── stage4_quality.py
+│   ├── stage5_classical.py
+│   └── stage10_report.py
 ├── realtime/
 │   ├── camera_capture.py      # Thread-safe OpenCV webcam
 │   ├── mic_stream.py          # Rolling-buffer microphone stream
@@ -22,10 +29,12 @@ deepfake_live_detector/
 │   ├── fastapi_server.py      # /detect and /health REST endpoints
 │   └── batch_processor.py     # Concurrent batch file scanner
 ├── frontend/
-│   └── streamlit_app.py       # Dashboard: Camera · Mic · Upload · History
+│   ├── streamlit_app.py       # Dashboard: Camera · Mic · Upload · History
+│   └── index.html             # Static frontend assets
 ├── training/
 │   ├── prepare_datasets.py    # Dataset crawler for d:\VIT\Datasets
-│   └── train.py               # Unified train + evaluate script
+│   ├── train.py               # Unified train + evaluate script
+│   └── run_training.py        # One-command training orchestrator
 ├── export_onnx.py             # One-click ONNX export
 ├── requirements.txt
 ├── Dockerfile
@@ -39,27 +48,29 @@ deepfake_live_detector/
 ### 1. Install Dependencies
 
 ```bash
-cd d:\VIT\
 pip install -r requirements.txt
 ```
 
 ### 2. Train & Save Models
 
 ```bash
-# Train BOTH image + audio models (auto-prepares datasets first)
+# Train both image + audio models (auto-prepares datasets first)
 python training/train.py --mode all --epochs 30 --batch 32
 
-# Train image model only
+# Image only
 python training/train.py --mode image --epochs 30 --batch 32
 
-# Train audio model only
+# Audio only
 python training/train.py --mode audio --epochs 30 --batch 32
 
 # Evaluate only (no training)
 python training/train.py --mode all --eval-only
 
+# Freeze backbone, train fusion head only
+python training/train.py --mode all --freeze-backbone --epochs 20
+
 # Skip dataset preparation (reuse existing lists)
-python training/train.py --mode all --epochs 30 --skip-prepare
+python training/train.py --mode all --skip-prepare
 ```
 
 **Models are saved to:**
@@ -91,7 +102,6 @@ API docs at http://localhost:8000/docs
 ### 5. Batch Processing
 
 ```bash
-# Start API server first, then:
 python api/batch_processor.py --dir path/to/files --out results.json --workers 10
 ```
 
@@ -128,4 +138,11 @@ When content is flagged, the system explains **why** with measured feature analy
 ```bash
 docker build -t deepfake-detector .
 docker run -p 8501:8501 -p 8000:8000 deepfake-detector
+```
+
+The image runs the Streamlit dashboard on port 8501. Start the API server separately by overriding the entrypoint:
+
+```bash
+docker run -p 8000:8000 deepfake-detector \
+    uvicorn api.fastapi_server:app --host 0.0.0.0 --port 8000
 ```

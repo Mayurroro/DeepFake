@@ -9,9 +9,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-RUN pip3 install --no-cache-dir --upgrade pip
+
 COPY requirements.txt .
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir --upgrade pip \
+    && pip3 install --no-cache-dir \
+       --extra-index-url https://download.pytorch.org/whl/cu118 \
+       -r requirements.txt
+
 COPY . .
 
 EXPOSE 8000 8501
