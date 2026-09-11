@@ -1,0 +1,9 @@
+.git
+__pycache__
+*.pyc
+tmp/
+*.pth
+*.onnx
+.planning/
+.agent/
+*.egg-info/

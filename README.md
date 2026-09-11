@@ -1,34 +1,131 @@
-# Deepfake Detector Retraining Project
+# 🛡️ Deepfake Live Detector
 
-This project focuses on retraining and enhancing existing deepfake detection models (Image and Audio) by utilizing newly available GPU hardware for higher accuracy and deeper training cycles.
+Real-time AI-powered deepfake detection for **images** and **audio** with live webcam + microphone capture.
 
-## 📁 Repository Structure
+---
 
-- `deepfake_live_detector/` - Contains the real-time AI-powered deepfake detection system for images and audio, using webcam and microphone capture. Check the `README.md` inside this directory for specific running instructions.
-- `Datasets/` - Audio and image dataset directories for training and evaluation.
-- `.planning/` - GSD project planning and tracking files, including milestones, state, and codebase maps.
+## 📁 Project Structure
 
-## 🎯 Core Value
-
-Higher accuracy detection of AI-generated content through deeper and longer training cycles, made feasible by GPU acceleration.
-
-## 🚀 Key Sub-Projects
-
-### Live Detector & Retraining Pipeline
-Located in `deepfake_live_detector/`. Contains the main logic for both batch and live inference, as well as the training pipeline:
-- **Image Detector**: EfficientNet-B4 + FFT/Edge heads
-- **Audio Detector**: CNN-LSTM on Mel-spectrograms
-- **Frontend**: Streamlit-based real-time dashboard
-- **API**: FastAPI server for remote detection endpoints
-
-**Training**:
-Make sure CUDA is properly configured and activated to utilize GPU acceleration. The `train.py` script inside `deepfake_live_detector/training/` is already configured for handling full end-to-end training and checkpoint saving for both image and audio.
-
-```bash
-cd deepfake_live_detector
-pip install -r requirements.txt
-python training/train.py --mode all --epochs 30 --batch 32
+```
+deepfake_live_detector/
+├── models/
+│   ├── image_detector.py      # EfficientNet-B4 + FFT/Edge heads
+│   └── audio_detector.py      # CNN-LSTM on Mel-spectrograms
+├── utils/
+│   ├── feature_extractors.py  # Image & audio preprocessing
+│   └── visualization.py       # Grad-CAM heatmaps, confidence bars
+├── realtime/
+│   ├── camera_capture.py      # Thread-safe OpenCV webcam
+│   ├── mic_stream.py          # Rolling-buffer microphone stream
+│   └── live_inference.py      # GPU/CPU inference + reasoning engine
+├── api/
+│   ├── fastapi_server.py      # /detect and /health REST endpoints
+│   └── batch_processor.py     # Concurrent batch file scanner
+├── frontend/
+│   └── streamlit_app.py       # Dashboard: Camera · Mic · Upload · History
+├── training/
+│   ├── prepare_datasets.py    # Dataset crawler for d:\VIT\Datasets
+│   └── train.py               # Unified train + evaluate script
+├── export_onnx.py             # One-click ONNX export
+├── requirements.txt
+├── Dockerfile
+└── README.md
 ```
 
-## 🐳 Docker Support
-A Docker image could be built for the detector to prevent environment mismatches. See inside `deepfake_live_detector` for its `Dockerfile`.
+---
+
+## 🚀 Quick Start
+
+### 1. Install Dependencies
+
+```bash
+cd d:\VIT\
+pip install -r requirements.txt
+```
+
+### 2. Train & Save Models
+
+```bash
+# Train BOTH image + audio models (auto-prepares datasets first)
+python training/train.py --mode all --epochs 30 --batch 32
+
+# Train image model only
+python training/train.py --mode image --epochs 30 --batch 32
+
+# Train audio model only
+python training/train.py --mode audio --epochs 30 --batch 32
+
+# Evaluate only (no training)
+python training/train.py --mode all --eval-only
+
+# Skip dataset preparation (reuse existing lists)
+python training/train.py --mode all --epochs 30 --skip-prepare
+```
+
+**Models are saved to:**
+
+```
+weights/
+├── image_detector.pth        # Best image model checkpoint
+├── image_detector_final.pth  # Final epoch image model
+├── audio_detector.pth        # Best audio model checkpoint
+└── audio_detector_final.pth  # Final epoch audio model
+```
+
+### 3. Launch Dashboard
+
+```bash
+streamlit run frontend/streamlit_app.py --server.port 8501
+```
+
+Open http://localhost:8501 → Use Camera, Microphone, or Upload tabs.
+
+### 4. Launch API Server
+
+```bash
+uvicorn api.fastapi_server:app --host 0.0.0.0 --port 8000
+```
+
+API docs at http://localhost:8000/docs
+
+### 5. Batch Processing
+
+```bash
+# Start API server first, then:
+python api/batch_processor.py --dir path/to/files --out results.json --workers 10
+```
+
+### 6. Export to ONNX
+
+```bash
+python export_onnx.py
+# Creates: onnx_models/image_detector.onnx, onnx_models/audio_detector.onnx
+```
+
+---
+
+## 🗂️ Datasets
+
+The training script auto-crawls `d:\VIT\Datasets`:
+
+- `DeepFake images/` → `fake/` and `real/` subfolders (train + test splits)
+- `DeepFake audio/` → `fake/` and `real/` WAV files (80/20 auto-split)
+
+---
+
+## 🧠 Detection Reasoning
+
+When content is flagged, the system explains **why** with measured feature analysis:
+
+**Image checks:** Frequency (FFT), Edge sharpness, Texture uniformity, Lighting, Color distribution, EXIF metadata
+
+**Audio checks:** Spectral centroid, Zero-crossings, MFCC formants, Spectral rolloff, Dynamic range, Breath/pause detection
+
+---
+
+## 🐳 Docker
+
+```bash
+docker build -t deepfake-detector .
+docker run -p 8501:8501 -p 8000:8000 deepfake-detector
+```
