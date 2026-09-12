@@ -1,3 +1,13 @@
+---
+title: Deepfake Live Detector
+emoji: 🛡️
+colorFrom: indigo
+colorTo: pink
+sdk: docker
+app_port: 8501
+pinned: false
+---
+
 # 🛡️ Deepfake Live Detector
 
 Real-time AI-powered deepfake detection for **images** and **audio** with live webcam + microphone capture.
@@ -133,10 +143,28 @@ When content is flagged, the system explains **why** with measured feature analy
 
 ---
 
+## 🌐 One-Click Free Deploy (Hugging Face Spaces)
+
+The dashboard runs in the browser at a public URL — no install, no GPU, no cost.
+
+1. Generate the small ONNX runtime models once (they're what the CPU image serves):
+
+   ```bash
+   python export_onnx.py      # creates onnx_models/*.onnx (~40 MB)
+   git add onnx_models && git commit && git push
+   ```
+
+2. Create a Space at https://huggingface.co/new-space → **Docker** → paste your GitHub repo (or push it).
+   The README metadata (`sdk: docker`, `app_port: 8501`) tells Spaces how to run it.
+
+3. Inference picks ONNX Runtime automatically (fast, ~300 MB RAM). Set `USE_ONNX=0` to force torch.
+
+**CPU-only inference:** the export uses `onnx_models/*.onnx`; torch is only a fallback. Free-tier machines have no GPU — images/audio still analyze in under a second on CPU.
+
 ## 🐳 Docker
 
 ```bash
-docker build -t deepfake-detector .
+docker build -t deepfake-detector .          # slim CPU image (~1 GB, no CUDA)
 docker run -p 8501:8501 -p 8000:8000 deepfake-detector
 ```
 
@@ -146,3 +174,5 @@ The image runs the Streamlit dashboard on port 8501. Start the API server separa
 docker run -p 8000:8000 deepfake-detector \
     uvicorn api.fastapi_server:app --host 0.0.0.0 --port 8000
 ```
+
+The CPU image installs `requirements-serve.txt` (torch CPU wheels). For training on GPU, keep using the local env with `requirements.txt`, then re-export ONNX with `python export_onnx.py`.

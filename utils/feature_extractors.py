@@ -1,17 +1,18 @@
 """Feature extraction for image and audio deepfake detection."""
 import cv2
 import numpy as np
-import torch
-import torchvision.transforms as T
 from PIL import Image
 from PIL.ExifTags import TAGS
 
 # ── Image ──────────────────────────────────────────────────────────
 
-IMG_TRANSFORM = T.Compose([
-    T.ToTensor(),
-    T.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-])
+def _img_transform():
+    """torchvision kept lazy so ONNX-only deployments never load torch."""
+    import torchvision.transforms as T
+    return T.Compose([
+        T.ToTensor(),
+        T.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+    ])
 
 def _load_rgb(source, size):
     """Accept file-path *or* RGB ndarray. Returns resized RGB uint8 ndarray."""
@@ -29,6 +30,7 @@ def _load_rgb(source, size):
 
 def preprocess_image(source, size=(512, 512)):
     """Accept file-path *or* BGR numpy array. Returns (rgb_tensor, freq_tensor, edge_tensor)."""
+    import torch
     img = _load_rgb(source, size)
     gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
@@ -40,7 +42,7 @@ def preprocess_image(source, size=(512, 512)):
     # Canny edges
     edges = cv2.Canny(cv2.GaussianBlur(gray, (5, 5), 0), 100, 200) / 255.0
 
-    rgb_t = IMG_TRANSFORM(img)
+    rgb_t = _img_transform()(img)
     freq_t = torch.tensor(mag, dtype=torch.float32).unsqueeze(0)
     edge_t = torch.tensor(edges, dtype=torch.float32).unsqueeze(0)
     return rgb_t, freq_t, edge_t
@@ -52,6 +54,7 @@ def preprocess_image_ensemble(source, size=(256, 256)):
     Returns (rgb_t, noise_t, freq_t). Noise is the high-pass residual (gray minus
     Gaussian blur) replicated to 3 channels for the Conv2d(3, ...) noise branch.
     """
+    import torch
     img = _load_rgb(source, size)
     gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
@@ -66,7 +69,7 @@ def preprocess_image_ensemble(source, size=(256, 256)):
     resid = (resid - resid.mean()) / (resid.std() + 1e-8)
     resid = np.stack([resid] * 3, axis=-1)  # replicate to 3 channels
 
-    rgb_t = IMG_TRANSFORM(img)
+    rgb_t = _img_transform()(img)
     noise_t = torch.tensor(resid.transpose(2, 0, 1), dtype=torch.float32)
     freq_t = torch.tensor(mag, dtype=torch.float32).unsqueeze(0)
     return rgb_t, noise_t, freq_t
@@ -97,6 +100,7 @@ def extract_metadata(path):
 
 def extract_audio_features(source, sr=16000, max_time_steps=400):
     """Accept file-path *or* numpy waveform. Returns (mel_tensor[1,128,T], aux_tensor[30])."""
+    import torch
     import librosa
 
     if isinstance(source, str):

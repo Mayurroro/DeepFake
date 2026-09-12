@@ -12,7 +12,7 @@ sys.path.insert(0, str(ROOT))
 app = FastAPI(title="Deepfake Live Detector API", version="2.0.0",
               description="Real-time deepfake detection for images and audio.")
 
-from realtime.live_inference import predict_audio
+from realtime.live_inference import predict_audio, get_backend
 from utils.pipeline import run_forensic_pipeline
 
 TMP = ROOT / "tmp"
@@ -89,7 +89,7 @@ async def detect(file: UploadFile = File(...)):
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "gpu": __import__("torch").cuda.is_available()}
+    return {"status": "ok", "backend": get_backend()}
 
 
 if __name__ == "__main__":

@@ -1,22 +1,21 @@
-FROM nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu22.04
+FROM python:3.11-slim
 
-ENV DEBIAN_FRONTEND=noninteractive TZ=UTC
+ENV DEBIAN_FRONTEND=noninteractive TZ=UTC PYTHONUNBUFFERED=1
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3-pip python3-dev build-essential \
-    libgl1-mesa-glx libglib2.0-0 ffmpeg libsndfile1 \
-    portaudio19-dev libasound2-dev \
+    ffmpeg libsndfile1 libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY requirements-serve.txt .
 RUN pip3 install --no-cache-dir --upgrade pip \
-    && pip3 install --no-cache-dir \
-       --extra-index-url https://download.pytorch.org/whl/cu118 \
-       -r requirements.txt
+    && pip3 install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu \
+    && pip3 install --no-cache-dir -r requirements-serve.txt
 
 COPY . .
 
 EXPOSE 8000 8501
+
+# ponytail: single service image; API server runs via `docker run <img> uvicorn ...`
 CMD ["streamlit", "run", "frontend/streamlit_app.py", "--server.port", "8501", "--server.address", "0.0.0.0"]

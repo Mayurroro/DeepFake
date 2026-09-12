@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deepfake Live Detector</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+<script type="importmap">
+{"imports": {"onnxruntime-web": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.17.1/dist/ort.min.mjs"}}
+</script>
+<style>
+  :root{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3;--muted:#8b949e;
+        --red:#f85149;--green:#3fb950;--amber:#d29922;--accent:#58a6ff}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       background:radial-gradient(1200px 600px at 50% -100px,#16263b 0%,var(--bg) 55%);color:var(--txt);min-height:100vh}
+  main{max-width:900px;margin:0 auto;padding:32px 20px 60px}
+  header{text-align:center;margin-bottom:24px}
+  h1{font-size:1.6rem;margin:0 0 6px}
+  header p{color:var(--muted);margin:0 0 4px;font-size:.95rem}
+  #status{color:var(--accent);font-size:.9rem;min-height:1.2em}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  #drop{border:2px dashed var(--line);border-radius:10px;padding:40px 16px;text-align:center;
+        color:var(--muted);cursor:pointer;transition:border-color .15s;user-select:none}
+  #drop.drag{border-color:var(--accent);color:var(--accent)}
+  #drop input{display:none}
+  #preview{display:none;max-width:100%;max-height:380px;margin:16px auto 0;border-radius:8px}
+  button{border:none;border-radius:8px;padding:10px 18px;font-size:1rem;cursor:pointer;
+         background:var(--accent);color:#0d1117;font-weight:600;margin-top:16px}
+  button:disabled{opacity:.45;cursor:not-allowed}
+  #result{display:none;margin-top:16px}
+  .verdict{font-size:1.4rem;font-weight:700;margin-bottom:12px}
+  .v-fake{color:var(--red)} .v-real{color:var(--green)}
+  .bar{margin:8px 0}
+  .bar .row{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:2px}
+  .bar .track{height:10px;background:#21262d;border-radius:6px;overflow:hidden}
+  .bar .fill{height:100%;border-radius:6px}
+  .fill-real{background:var(--green)} .fill-fake{background:var(--red)}
+  #meta{color:var(--muted);font-size:.85rem;margin-top:14px}
+  footer{color:var(--muted);font-size:.8rem;text-align:center;margin-top:30px;line-height:1.6}
+  .err{color:var(--red)}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>🛡️ Deepfake Live Detector</h1>
+    <p>EfficientNet-B4 multi-branch ensemble (RGB + FFT + noise-residual) trained on real/vs-AI/manipulated imagery.</p>
+    <div id="status">Loading model…</div>
+  </header>
+
+  <div class="card">
+    <div id="drop">
+      <strong>Drop an image here</strong> or click to browse
+      <br><span style="font-size:.85rem">Detection runs fully in your browser via ONNX Runtime — nothing is uploaded.</span>
+      <input type="file" id="file" accept="image/*">
+    </div>
+    <img id="preview" alt="preview">
+    <div style="text-align:center"><button id="go" disabled>Analyze</button></div>
+
+    <div id="result">
+      <div class="verdict" id="verdict"></div>
+      <div class="bar"><div class="row"><span>REAL</span><span id="p-real"></span></div>
+        <div class="track"><div class="fill fill-real" id="bar-real" style="width:0%"></div></div></div>
+      <div class="bar"><div class="row"><span>FAKE / MANIPULATED / AI</span><span id="p-fake"></span></div>
+        <div class="track"><div class="fill fill-fake" id="bar-fake" style="width:0%"></div></div></div>
+      <div id="meta"></div>
+    </div>
+  </div>
+
+  <footer>
+    Image model only in this browser build. Audio detection + the full pipeline ship with the
+    <a href="https://github.com/" style="color:var(--muted)">repository</a> Gradio app.
+    <br>No uploaded data leaves your machine.
+  </footer>
+</main>
+
+<script type="module">
+import { buildInputs, softmax, S } from './js/preprocess.mjs';
+import * as ort from 'onnxruntime-web';
+
+ort.env.wasm.numThreads = 1;
+ort.env.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.17.1/dist/';
+
+const MODEL_URL = 'models/image_detector.onnx';
+let session = null;
+const statusEl = document.getElementById('status');
+
+try {
+  session = await ort.InferenceSession.create(MODEL_URL, { executionProviders: ['wasm'], graphOptimizationLevel: 'all' });
+  statusEl.textContent = 'Model ready.';
+  document.getElementById('go').disabled = false;
+} catch (e) {
+  statusEl.innerHTML = '<span class="err">Failed to load model: ' + e.message + '</span>';
+}
+
+const drop = document.getElementById('drop');
+const input = document.getElementById('file');
+const preview = document.getElementById('preview');
+const go = document.getElementById('go');
+const result = document.getElementById('result');
+let imageData = null, imageName = '';
+
+async function handleFile(f) {
+  if (!f || !f.type.startsWith('image/')) return;
+  const url = URL.createObjectURL(f);
+  preview.onload = () => URL.revokeObjectURL(url);
+  preview.src = url;
+  preview.style.display = 'block';
+  const bmp = await createImageBitmap(f);
+  const canvas = document.createElement('canvas');
+  canvas.width = bmp.width; canvas.height = bmp.height;
+  const ctx = canvas.getContext('2d', { willReadFrequently: true });
+  ctx.drawImage(bmp, 0, 0);
+  const img = ctx.getImageData(0, 0, bmp.width, bmp.height);
+  const d = img.data, n = bmp.width * bmp.height, rgb = new Uint8Array(n * 3);
+  for (let i = 0; i < n; i++) { rgb[i*3]=d[i*4]; rgb[i*3+1]=d[i*4+1]; rgb[i*3+2]=d[i*4+2]; }
+  imageData = { rgb, w: bmp.width, h: bmp.height };
+  imageName = f.name;
+  bmp.close();
+}
+
+drop.addEventListener('click', () => input.click());
+drop.addEventListener('dragover', e => { e.preventDefault(); drop.classList.add('drag'); });
+drop.addEventListener('dragleave', () => drop.classList.remove('drag'));
+drop.addEventListener('drop', e => { e.preventDefault(); drop.classList.remove('drag'); handleFile(e.dataTransfer.files[0]); });
+input.addEventListener('change', () => handleFile(input.files[0]));
+
+go.addEventListener('click', async () => {
+  if (!session || !imageData) return;
+  go.disabled = true;
+  result.style.display = 'block';
+  const t0 = performance.now();
+  const inT = buildInputs(imageData.rgb, imageData.w, imageData.h);
+  const feeds = {
+    rgb: new ort.Tensor('float32', inT.rgb, [1, 3, S, S]),
+    noise: new ort.Tensor('float32', inT.noise, [1, 3, S, S]),
+    freq: new ort.Tensor('float32', inT.freq, [1, 1, S, S]),
+  };
+  try {
+    const res = await session.run(feeds);
+    const probs = softmax(Array.from(res.logits.data));
+    const dt = (performance.now() - t0).toFixed(0);
+    const fake = probs[1], real = probs[0];
+    const verdict = document.getElementById('verdict');
+    verdict.textContent = fake > real
+      ? `FAKE / NOT REAL — ${(Math.max(fake, real)*100).toFixed(1)}% confidence`
+      : `Looks REAL — ${(real*100).toFixed(1)}% confidence`;
+    verdict.className = 'verdict ' + (fake > real ? 'v-fake' : 'v-real');
+    document.getElementById('p-real').textContent = (real*100).toFixed(1)+'%';
+    document.getElementById('p-fake').textContent = (fake*100).toFixed(1)+'%';
+    document.getElementById('bar-real').style.width = (real*100).toFixed(1)+'%';
+    document.getElementById('bar-fake').style.width = (fake*100).toFixed(1)+'%';
+    document.getElementById('meta').textContent =
+      `${imageName} · ${imageData.w}×${imageData.h} · analyzed in-browser in ${dt} ms`;
+  } catch (e) {
+    document.getElementById('verdict').className = 'verdict err';
+    document.getElementById('verdict').textContent = 'Error: ' + e.message;
+  }
+  go.disabled = false;
+});
+</script>
+</body>
+</html>

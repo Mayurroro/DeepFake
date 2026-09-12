@@ -1,20 +1,59 @@
-"""Fast inference wrapper — loads models once, exposes predict_image / predict_audio.
-Includes detailed feature-level reasoning for why content is flagged.
+"""Fast inference wrapper — ONNX Runtime first, torch fallback.
+
+ONNX mode (default when onnx_models/*.onnx exist) loads only onnxruntime +
+numpy/cv2, so CPU containers don't pay torch's memory/cold-start cost.
+Set USE_ONNX=0 to force the torch path (GPU training runs unaffected).
 """
-import os, time, torch, torch.nn.functional as F, numpy as np, cv2
+import os, time, numpy as np, cv2
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 WEIGHTS = ROOT / "weights"
+ONNX_DIR = ROOT / "onnx_models"
 CLASSES = ["REAL", "MANIPULATED", "AI_GENERATED"]
 IMAGE_CLASSES = ["REAL", "FAKE"]
 
+USE_ONNX = os.environ.get("USE_ONNX", "1") != "0"
+
+_img_session = None
+_aud_session = None
 _device = None
 _img_model = None
 _aud_model = None
 
 
+def _load_onnx(kind):
+    """Load (and cache) the ONNX session for 'image'/'audio', or None."""
+    global _img_session, _aud_session
+    if not USE_ONNX:
+        return None
+    session = _img_session if kind == "image" else _aud_session
+    if session is not None:
+        return session
+    try:
+        import onnxruntime as ort
+    except ImportError:
+        return None
+    p = ONNX_DIR / f"{kind}_detector.onnx"
+    if not p.exists():
+        print(f"[LiveInference] {p.name} missing; falling back to torch")
+        return None
+    session = ort.InferenceSession(str(p), providers=["CPUExecutionProvider"])
+    if kind == "image":
+        _img_session = session
+    else:
+        _aud_session = session
+    print(f"[LiveInference] {kind} ONNX ready: {p.name}")
+    return session
+
+
+def _softmax(x):
+    e = np.exp(x - np.max(x, axis=-1, keepdims=True))
+    return e / e.sum(axis=-1, keepdims=True)
+
+
 def _get_device():
+    import torch
     global _device
     if _device is None:
         if torch.cuda.is_available():
@@ -28,6 +67,7 @@ def _get_device():
 
 
 def _load_image_model():
+    import torch
     global _img_model
     if _img_model is None:
         import sys; sys.path.insert(0, str(ROOT))
@@ -44,6 +84,7 @@ def _load_image_model():
 
 
 def _load_audio_model():
+    import torch
     global _aud_model
     if _aud_model is None:
         import sys; sys.path.insert(0, str(ROOT))
@@ -232,25 +273,91 @@ def _analyze_audio_features(source, sr=16000):
     return anomalies, reasons
 
 
+# ─── ONNX preprocessors (numpy; mirrors utils/feature_extractors) ────
+def _onnx_image_inputs(source):
+    """RGB/noise/freq numpy inputs for the exported image ONNX graph."""
+    from utils.feature_extractors import _load_rgb
+    img = _load_rgb(source, (256, 256))
+    gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+
+    f = np.fft.fftshift(np.fft.fft2(gray))
+    mag = 20 * np.log(np.abs(f) + 1e-8)
+    mag = (mag - mag.min()) / (mag.max() - mag.min() + 1e-8)
+
+    gray_f = gray.astype(np.float32) / 255.0
+    resid = gray_f - cv2.GaussianBlur(gray_f, (5, 5), 0)
+    resid = (resid - resid.mean()) / (resid.std() + 1e-8)
+
+    rgb = img.astype(np.float32) / 255.0
+    rgb = np.transpose(rgb, (2, 0, 1))
+    mean = np.array([0.485, 0.456, 0.406], np.float32)[:, None, None]
+    std = np.array([0.229, 0.224, 0.225], np.float32)[:, None, None]
+    rgb = ((rgb - mean) / std).astype(np.float32)
+
+    return {"rgb": rgb[None], "noise": np.stack([resid] * 3, axis=-1).transpose(2, 0, 1).astype(np.float32)[None],
+            "freq": mag.astype(np.float32)[None, None]}
+
+
+def _onnx_audio_inputs(source, sr=16000, max_time_steps=400):
+    """mel/aux numpy inputs for the exported audio ONNX graph."""
+    import librosa
+    if isinstance(source, str):
+        y, sr = librosa.load(source, sr=sr)
+    else:
+        y = source.astype(np.float32)
+
+    S = librosa.power_to_db(librosa.feature.melspectrogram(y=y, sr=sr, n_mels=128, fmax=8000), ref=np.max)
+    if S.shape[1] > max_time_steps:
+        S = S[:, :max_time_steps]
+    else:
+        S = np.pad(S, ((0, 0), (0, max_time_steps - S.shape[1])))
+
+    cent = librosa.feature.spectral_centroid(y=y, sr=sr)[0]
+    roll = librosa.feature.spectral_rolloff(y=y, sr=sr)[0]
+    mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
+    aux = np.concatenate([
+        [np.mean(cent), np.var(cent)],
+        [np.mean(roll), np.var(roll)],
+        np.mean(mfcc, axis=1),
+        np.var(mfcc, axis=1),
+    ])  # length = 30
+
+    return {"mel": S.astype(np.float32)[None, None], "aux": aux.astype(np.float32)[None]}
+
+
 # ─── Public API ──────────────────────────────────────────────────────
+
+def get_backend():
+    """Report which inference backend would run: 'onnx' or 'torch'."""
+    if USE_ONNX and ((ONNX_DIR / "image_detector.onnx").exists() or (ONNX_DIR / "audio_detector.onnx").exists()):
+        return "onnx"
+    return "torch"
 
 def predict_image(source):
     """Run image detection on a file path or numpy RGB array.
     Returns dict with prediction, confidence, probabilities, anomalies, reasons, and timing.
     """
-    from utils.feature_extractors import preprocess_image_ensemble
     t0 = time.perf_counter()
-    rgb, noise, freq = preprocess_image_ensemble(source)
-    dev = _get_device()
-    model = _load_image_model()
-
-    with torch.no_grad():
-        logits, _ = model(rgb.unsqueeze(0).to(dev), noise.unsqueeze(0).to(dev), freq.unsqueeze(0).to(dev))
-        probs = F.softmax(logits, dim=1).squeeze()
-        conf, idx = probs.max(0)
-
-    prediction = IMAGE_CLASSES[idx.item()]
-    probabilities = {c: round(float(p), 4) for c, p in zip(IMAGE_CLASSES, probs)}
+    session = _load_onnx("image")
+    if session is not None:
+        logits = session.run(["logits"], _onnx_image_inputs(source))[0][0]
+        probs = _softmax(logits)
+        conf, idx = float(probs.max()), int(probs.argmax())
+        prediction = IMAGE_CLASSES[idx]
+        probabilities = {c: round(float(p), 4) for c, p in zip(IMAGE_CLASSES, probs)}
+    else:
+        import torch, torch.nn.functional as F
+        from utils.feature_extractors import preprocess_image_ensemble
+        rgb, noise, freq = preprocess_image_ensemble(source)
+        dev = _get_device()
+        model = _load_image_model()
+        with torch.no_grad():
+            logits, _ = model(rgb.unsqueeze(0).to(dev), noise.unsqueeze(0).to(dev), freq.unsqueeze(0).to(dev))
+            probs = F.softmax(logits, dim=1).squeeze()
+            conf, idx = probs.max(0)
+        prediction = IMAGE_CLASSES[idx.item()]
+        probabilities = {c: round(float(p), 4) for c, p in zip(IMAGE_CLASSES, probs)}
+        conf = conf.item()
 
     # Run feature-level analysis for reasoning
     anomalies, reasons = _analyze_image_features(source)
@@ -260,19 +367,19 @@ def predict_image(source):
     if prediction != "REAL":
         reasons.insert(0,
             f"🤖 **Model Verdict:** The neural network classified this image as **{prediction}** "
-            f"with **{conf.item():.1%}** confidence. "
+            f"with **{conf:.1%}** confidence. "
             f"Class probabilities — {prob_str}."
         )
     else:
         reasons = [
             f"✅ **Model Verdict:** No signs of artificial generation or manipulation detected. "
-            f"Confidence: **{conf.item():.1%}**. The image passes all feature-level integrity checks."
+            f"Confidence: **{conf:.1%}**. The image passes all feature-level integrity checks."
         ]
 
     dt = (time.perf_counter() - t0) * 1000
     return {
         "prediction": prediction,
-        "confidence": round(conf.item(), 4),
+        "confidence": round(conf, 4),
         "probabilities": probabilities,
         "anomalies": anomalies,
         "reasons": reasons,
@@ -284,21 +391,30 @@ def predict_audio(source, sr=16000):
     """Run audio detection on a file path or numpy waveform.
     Returns dict with prediction, confidence, anomalies, reasons, and timing.
     """
-    from utils.feature_extractors import extract_audio_features
     t0 = time.perf_counter()
-    mel, aux = extract_audio_features(source, sr=sr)
-    if mel is None:
-        return {"prediction": "ERROR", "confidence": 0, "anomalies": [], "reasons": ["Could not process audio."], "detection_time_ms": 0}
-
-    dev = _get_device()
-    model = _load_audio_model()
-
-    with torch.no_grad():
-        logits, _ = model(mel.unsqueeze(0).to(dev), aux.unsqueeze(0).to(dev))
-        probs = F.softmax(logits, dim=1).squeeze()
-        conf, idx = probs.max(0)
-
-    prediction = CLASSES[idx.item()]
+    session = _load_onnx("audio")
+    if session is not None:
+        inputs = _onnx_audio_inputs(source, sr=sr)
+        if inputs["mel"].shape[-1] == 0:
+            return {"prediction": "ERROR", "confidence": 0, "anomalies": [], "reasons": ["Could not process audio."], "detection_time_ms": 0}
+        logits = session.run(["logits"], inputs)[0][0]
+        probs = _softmax(logits)
+        conf, idx = float(probs.max()), int(probs.argmax())
+        prediction = CLASSES[idx]
+    else:
+        import torch, torch.nn.functional as F
+        from utils.feature_extractors import extract_audio_features
+        mel, aux = extract_audio_features(source, sr=sr)
+        if mel is None:
+            return {"prediction": "ERROR", "confidence": 0, "anomalies": [], "reasons": ["Could not process audio."], "detection_time_ms": 0}
+        dev = _get_device()
+        model = _load_audio_model()
+        with torch.no_grad():
+            logits, _ = model(mel.unsqueeze(0).to(dev), aux.unsqueeze(0).to(dev))
+            probs = F.softmax(logits, dim=1).squeeze()
+            conf, idx = probs.max(0)
+        prediction = CLASSES[idx.item()]
+        conf = conf.item()
 
     # Run feature-level analysis for reasoning
     anomalies, reasons = _analyze_audio_features(source, sr=sr)
@@ -306,19 +422,19 @@ def predict_audio(source, sr=16000):
     if prediction != "REAL":
         reasons.insert(0,
             f"🤖 **Model Verdict:** The neural network classified this audio as **{prediction}** "
-            f"with **{conf.item():.1%}** confidence. "
-            f"Class probabilities — Real: {probs[0].item():.1%}, Manipulated: {probs[1].item():.1%}, AI-Generated: {probs[2].item():.1%}."
+            f"with **{conf:.1%}** confidence. "
+            f"Class probabilities — Real: {probs[0]:.1%}, Manipulated: {probs[1]:.1%}, AI-Generated: {probs[2]:.1%}."
         )
     else:
         reasons = [
             f"✅ **Model Verdict:** No signs of synthetic generation or manipulation detected. "
-            f"Confidence: **{conf.item():.1%}**. The audio passes all spectral integrity checks."
+            f"Confidence: **{conf:.1%}**. The audio passes all spectral integrity checks."
         ]
 
     dt = (time.perf_counter() - t0) * 1000
     return {
         "prediction": prediction,
-        "confidence": round(conf.item(), 4),
+        "confidence": round(conf, 4),
         "anomalies": anomalies,
         "reasons": reasons,
         "detection_time_ms": int(dt),

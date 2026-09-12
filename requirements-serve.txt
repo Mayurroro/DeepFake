@@ -1,0 +1,20 @@
+# Serving deps for the CPU Docker image (HF Spaces / EC2 / VPS).
+# Intentionally excludes training-only packages (albumentations, datasets,
+# matplotlib, onnx, PyAudio, c2pa, exiftool, streamlit-webrtc).
+# torch/torchvision installed separately from the CPU wheel index in the
+# Dockerfile; kept here as a fallback for local `pip install -r` runs.
+torch>=2.0.0
+torchvision>=0.15.0
+timm>=0.9.2
+numpy>=1.24.0
+scipy>=1.10.0
+opencv-python-headless>=4.8.0
+Pillow>=10.0.0
+librosa>=0.10.0
+soundfile>=0.12.1
+onnxruntime>=1.15.0
+fastapi>=0.103.1
+uvicorn[standard]>=0.23.2
+python-multipart>=0.0.6
+pydantic>=2.3.0
+streamlit>=1.26.0

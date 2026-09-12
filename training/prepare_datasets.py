@@ -1,7 +1,7 @@
-"""Crawl d:\\VIT\\Datasets and Hugging Face to produce train/test file lists for image and audio."""
+"""Crawl a dataset root (default d:\\VIT\\Datasets) and Hugging Face to produce train/test file lists for image and audio."""
 import os, glob, random
 
-DATASETS = r"d:\VIT\Datasets"
+DATASETS = os.environ.get("DATASETS_ROOT", r"d:\VIT\Datasets")
 OUT = os.path.join(os.path.dirname(__file__))
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tiff"}
 
